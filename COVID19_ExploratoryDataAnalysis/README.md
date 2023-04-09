@@ -4,7 +4,11 @@ This project is focused at COVI19 impact in USA using Exploratory Data Analysis
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+COVID-19 is haunting the world from Jan 2020. It has brought world to a halt for more than 2 years.
+Due to the various steps taken by the governments across the world, we are able to see the world is trying to come back to normal.
+USA is one of the worst hit countries by the Pandemic.
+Federal government and state governments have taken several steps to help us to stay safe from the COVID-19, which includes mass vaccinations and several economic packages.
+I will be analyzing the pandemic situation in United States of America till date.
 
 ## Getting Started
 
