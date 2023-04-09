@@ -1,6 +1,6 @@
 # COVID19_ExploratoryDataAnalysis
 
-Simple overview of use/purpose.
+This project is focused at COVI19 impact in USA using Exploratory Data Analysis
 
 ## Description
 
@@ -10,41 +10,31 @@ An in-depth paragraph about your project and overview of use.
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* Jupyter Notebook
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* Please install Anaconda to use Jupyer Notebook
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+* Clone this folder
+* Run the ipynb file using Jupyter Notebook
 
 ## Help
 
-Any advise for common problems or issues.
 ```
-command to run if program contains helper info
+Please use Jupyter Notebook to run the ipynb file and make sure all the files in this folder are cloned as they are required to run ipynb file.
 ```
 
 ## Authors
 
 Contributors names and contact info
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Soma Shekar Vayuvegula
 
 ## Version History
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release
 
@@ -54,9 +44,7 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* Centers for Disease Control and Prevention (CDC)
+* https://data.cdc.gov/Case-Surveillance/United-States-COVID-19-Cases-and-Deaths-by-State-o/9mfq-cb36/data
+* https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-Jurisdi/unsk-b7fc/data
+
