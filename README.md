@@ -6,6 +6,4 @@ This repository showcases a collection of 10 projects I've worked on, demonstrat
 
 1. COVID-19_EDA
 
-1. COVID-19_EDA
-
 Description: A project that focuses on COVID-19 impact and vaccination progress in USA.
