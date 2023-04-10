@@ -1,12 +1,15 @@
-# BreastCancerPrediction
+# StockMarketPrediction
 
-A project that focuses on Breast Cancer Prediction using public datasets with symptoms of patients diagonized with Cancer
+A project that focuses on Stock Market Prediction using Time Series Forecast model
 
 ## Description
 
-   Breast Cancer is caused by healthy cells of the tissue are invaded and mutated, which will further grow in large numbers to form a malignant tumor.
+   	Stock market analysis and prediction will bear huge financial payoffs as this will decide the profit-making for many individuals/firms. With the amount of data available on the internet, Stock market analysis and prediction have gained much momentum of late.
 	
-   As Cancer is troubling the world and especially Breast Cancer in women, I have worked on the available public datasets, which will help us identify cancer at its early stages depending on the various attributes provided by the patients who have been diagnosed with Breast Cancer.
+	Analyzing data related to the stock market can be tricky because of the amount of data available, but it is equally interesting. Creating a proper prediction system will help in profit maximization.
+	
+	The primary aim of this project is to build a prediction system using different models to see past trends and forecast if the value of a stock will rise or fall.
+
 
 
 ## Getting Started
@@ -47,6 +50,8 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 
 ## Acknowledgments
 
-* Kaggle. (n.d.). breast_cancer_detection (November 2022). www.kaggle.com. Retrieved December 11, 2022,from https://www.kaggle.com/code/architkuiya/breast-cancer-detection/data
+* ●	Damarla, R. (n.d.). Stock Market Prediction using Decision Tree. Kaggle. Retrieved March 18, 2023, from https://www.kaggle.com/datasets/camnugent/sandp500?resource=download
+●	Mooney, P. (n.d.). Stock Market Data (NASDAQ, NYSE, S&P500). Kaggle. Retrieved March 18, 2023, from https://www.kaggle.com/datasets/camnugent/sandp500?resource=download
+
 
 
