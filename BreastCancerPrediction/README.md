@@ -1,14 +1,13 @@
-# COVID19_ExploratoryDataAnalysis
+# BreastCancerPrediction
 
-This project is focused at COVI19 impact in USA using Exploratory Data Analysis
+This project is focused at Breast Cancer Prediction with the available public datasets
 
 ## Description
 
-COVID-19 is haunting the world from Jan 2020. It has brought world to a halt for more than 2 years.
-Due to the various steps taken by the governments across the world, we are able to see the world is trying to come back to normal.
-USA is one of the worst hit countries by the Pandemic.
-Federal government and state governments have taken several steps to help us to stay safe from the COVID-19, which includes mass vaccinations and several economic packages.
-I will be analyzing the pandemic situation in United States of America till date.
+   Breast Cancer is caused by healthy cells of the tissue are invaded and mutated, which will further grow in large numbers to form a malignant tumor.
+	
+   As Cancer is troubling the world and especially Breast Cancer in women, I have worked on the available public datasets, which will help us identify cancer at its early stages depending on the various attributes provided by the patients who have been diagnosed with Breast Cancer.
+
 
 ## Getting Started
 
@@ -48,7 +47,6 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 
 ## Acknowledgments
 
-* Centers for Disease Control and Prevention (CDC)
-* https://data.cdc.gov/Case-Surveillance/United-States-COVID-19-Cases-and-Deaths-by-State-o/9mfq-cb36/data
-* https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-Jurisdi/unsk-b7fc/data
+* Kaggle. (n.d.). breast_cancer_detection (November 2022). www.kaggle.com. Retrieved December 11, 2022,from https://www.kaggle.com/code/architkuiya/breast-cancer-detection/data
+
 
