@@ -12,6 +12,7 @@ This repository showcases a collection of 10 projects I've worked on, demonstrat
 6. [CovidVaccinesImpactAnalysis](https://github.com/somas1986/DataScience_Portfolio/tree/main/CovidVaccinesImpactAnalysis)
 7. [SocialMediaAnalysis](https://github.com/somas1986/DataScience_Portfolio/tree/main/SocialMediaAnalysis)
 8. [StockMarketPrediction](https://github.com/somas1986/DataScience_Portfolio/tree/main/StockMarketPrediction)
+9. [WeatherApp](https://github.com/somas1986/DataScience_Portfolio/blob/main/WeatherApp)
 
 
 ### 1. AirlineSafteyAnalysis
@@ -46,3 +47,6 @@ Description: A project that focuses on analysis of social media handles to predi
 
 Description: A project that focuses on Stock Market Prediction using Time Series Forecast model.
 
+### 9. WeatherApp
+
+Description: A project that focuses on developing application using Python to get the current weather details for a particular city.
