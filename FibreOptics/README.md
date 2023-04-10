@@ -9,21 +9,21 @@ A project that focuses on developing billing system for a Fibre Optics firm.
 
 ### Dependencies
 
-* Jupyter Notebook
+* PyCharm Edu
 
 ### Installing
 
-* Please install Anaconda to use Jupyer Notebook
+* Please install PyCharm Edu
 
 ### Executing program
 
 * Clone this folder
-* Run the ipynb file using Jupyter Notebook
+* Run the py file using PyCharm Edu
 
 ## Help
 
 ```
-Please use Jupyter Notebook to run the ipynb file and make sure all the files in this folder are cloned as they are required to run ipynb file.
+Please use PyCharm Edu to run the py file.
 ```
 
 ## Authors
@@ -43,6 +43,6 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 
 ## Acknowledgments
 
-* Kaggle. (n.d.). breast_cancer_detection (November 2022). www.kaggle.com. Retrieved December 11, 2022,from https://www.kaggle.com/code/architkuiya/breast-cancer-detection/data
+* 
 
 
