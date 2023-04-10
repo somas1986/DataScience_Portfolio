@@ -1,28 +1,24 @@
-# BreastCancerPrediction
+# CovidVaccinesImpactAnalysis
 
-A project that focuses on Breast Cancer Prediction using public datasets with symptoms of patients diagonized with Cancer
+A project that focuses on analysis of COVID19 vaccines on human beings.
 
 ## Description
 
-   Breast Cancer is caused by healthy cells of the tissue are invaded and mutated, which will further grow in large numbers to form a malignant tumor.
-	
-   As Cancer is troubling the world and especially Breast Cancer in women, I have worked on the available public datasets, which will help us identify cancer at its early stages depending on the various attributes provided by the patients who have been diagnosed with Breast Cancer.
-
+   
 
 ## Getting Started
 
 ### Dependencies
 
-* Jupyter Notebook
+* 
 
 ### Installing
 
-* Please install Anaconda to use Jupyer Notebook
+* 
 
 ### Executing program
 
-* Clone this folder
-* Run the ipynb file using Jupyter Notebook
+* 
 
 ## Help
 
@@ -47,6 +43,6 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 
 ## Acknowledgments
 
-* Kaggle. (n.d.). breast_cancer_detection (November 2022). www.kaggle.com. Retrieved December 11, 2022,from https://www.kaggle.com/code/architkuiya/breast-cancer-detection/data
+*
 
 
