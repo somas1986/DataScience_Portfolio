@@ -1,12 +1,8 @@
-# BreastCancerPrediction
+# FibreOptics
 
-A project that focuses on Breast Cancer Prediction using public datasets with symptoms of patients diagonized with Cancer
+A project that focuses on developing billing system for a Fibre Optics firm.
 
 ## Description
-
-   Breast Cancer is caused by healthy cells of the tissue are invaded and mutated, which will further grow in large numbers to form a malignant tumor.
-	
-   As Cancer is troubling the world and especially Breast Cancer in women, I have worked on the available public datasets, which will help us identify cancer at its early stages depending on the various attributes provided by the patients who have been diagnosed with Breast Cancer.
 
 
 ## Getting Started
