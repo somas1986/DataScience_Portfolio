@@ -1,6 +1,6 @@
 # BreastCancerPrediction
 
-This project is focused at Breast Cancer Prediction with the available public datasets
+A project that focuses on Breast Cancer Prediction using public datasets with symptoms of patients diagonized with Cancer
 
 ## Description
 
