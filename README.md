@@ -13,6 +13,7 @@ This repository showcases a collection of 10 projects I've worked on, demonstrat
 7. [SocialMediaAnalysis](https://github.com/somas1986/DataScience_Portfolio/tree/main/SocialMediaAnalysis)
 8. [StockMarketPrediction](https://github.com/somas1986/DataScience_Portfolio/tree/main/StockMarketPrediction)
 9. [WeatherApp](https://github.com/somas1986/DataScience_Portfolio/blob/main/WeatherApp)
+10. [FibreOptics](https://github.com/somas1986/DataScience_Portfolio/tree/main/FibreOptics)
 
 
 ### 1. AirlineSafteyAnalysis
@@ -50,3 +51,7 @@ Description: A project that focuses on Stock Market Prediction using Time Series
 ### 9. WeatherApp
 
 Description: A project that focuses on developing application using Python to get the current weather details for a particular city.
+
+### 10. FibreOptics
+
+Description: A project that focuses on developing billing system for a Fibre Optics firm.
