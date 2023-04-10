@@ -1,33 +1,30 @@
-# BreastCancerPrediction
+# WeatherApp
 
-A project that focuses on Breast Cancer Prediction using public datasets with symptoms of patients diagonized with Cancer
+A project that focuses on developing application using Python to get the current weather details for a particular city
 
 ## Description
 
-   Breast Cancer is caused by healthy cells of the tissue are invaded and mutated, which will further grow in large numbers to form a malignant tumor.
-	
-   As Cancer is troubling the world and especially Breast Cancer in women, I have worked on the available public datasets, which will help us identify cancer at its early stages depending on the various attributes provided by the patients who have been diagnosed with Breast Cancer.
-
+   
 
 ## Getting Started
 
 ### Dependencies
 
-* Jupyter Notebook
+* PyCharm Edu
 
 ### Installing
 
-* Please install Anaconda to use Jupyer Notebook
+* Please install PyCharm Edu
 
 ### Executing program
 
 * Clone this folder
-* Run the ipynb file using Jupyter Notebook
+* Run the py file using PyCharm Edu
 
 ## Help
 
 ```
-Please use Jupyter Notebook to run the ipynb file and make sure all the files in this folder are cloned as they are required to run ipynb file.
+Please use PyCharm Edu to run the py file.
 ```
 
 ## Authors
@@ -47,6 +44,6 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 
 ## Acknowledgments
 
-* Kaggle. (n.d.). breast_cancer_detection (November 2022). www.kaggle.com. Retrieved December 11, 2022,from https://www.kaggle.com/code/architkuiya/breast-cancer-detection/data
+* 
 
 
