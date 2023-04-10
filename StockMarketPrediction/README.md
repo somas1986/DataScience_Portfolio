@@ -5,7 +5,9 @@ A project that focuses on Stock Market Prediction using Time Series Forecast mod
 ## Description
 
    Stock market analysis and prediction will bear huge financial payoffs as this will decide the profit-making for many individuals/firms. With the amount of data available on the internet, Stock market analysis and prediction have gained much momentum of late.
+   
    Analyzing data related to the stock market can be tricky because of the amount of data available, but it is equally interesting. Creating a proper prediction system will help in profit maximization.
+   
    The primary aim of this project is to build a prediction system using different models to see past trends and forecast if the value of a stock will rise or fall.
 
 
