@@ -1,6 +1,6 @@
 # DataScience_Portfolio - Soma Shekar Vayuvegula
 
-This repository showcases 10 projects I've worked on, demonstrating my skills in various programming languages, frameworks, and technologies.
+This repository showcases 10 projects I've worked on, demonstrating my skills in various programming languages, frameworks, and technologies. Please visit my website [somavayuvegula.com](https://www.somavayuvegula.com/portfolio)
 
 # Table of Contents
 
