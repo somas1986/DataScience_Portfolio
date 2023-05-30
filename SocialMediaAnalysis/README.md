@@ -4,7 +4,10 @@ A project that focuses on analysis of social media handles to predict which zonr
 
 ## Description
 
-   
+   Social media is important arm of the current internet world. Social media not just provides content and
+entertainment but also has become a good socurce of income and popularity.
+With the datasets available from Kaggle, I will process the data to show which category has is trending
+per country.
 
 ## Getting Started
 
