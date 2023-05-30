@@ -1,4 +1,4 @@
-# WeatherApp
+# Weather App
 
 A project that focuses on developing application using Python to get the current weather details for a particular city
 
