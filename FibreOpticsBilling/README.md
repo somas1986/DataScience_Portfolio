@@ -4,7 +4,7 @@ A project that focuses on developing billing system for a Fibre Optics firm.
 
 ## Description
 
-This project aims at developing billing system for Fiber Optics firm which takes the input as Length of fiber optic cable to be installed, Price per foot of Fiber optics installation and calculates the installation cost and issues receipt using Python.
+This project aims to develop a billing system for a Fiber Optics firm that takes the input as the Length of fiber optic cable to be installed, Price per foot of Fiber optics installation and calculates the installation cost, and issues receipt using Python.
 
 
 ## Getting Started
