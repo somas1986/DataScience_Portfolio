@@ -1,4 +1,4 @@
-# CovidVaccinesImpactAnalysis
+# Covid Vaccines Impact Analysis
 
 A project that focuses on analysis of COVID19 vaccines on human beings.
 
