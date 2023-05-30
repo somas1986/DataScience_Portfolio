@@ -1,8 +1,12 @@
-# COVID19DataPreparation
+# COVID-19 Data Preparation
 
 A project that focuses on Data Prepartion from three diffrent sources of different file formats (CSV, Web page and API).
 
 ## Description
+
+   COVID-19 has impacted the world very badly and has been a topic of discussion and analysis for over two years.
+
+   COVID-19 cases and deaths show how the countries are impacted due to COVID-19, COVID-19 testing and vaccinations are very important and give a picture about the countries efforts to get back to normalcy.
 
 
 ## Getting Started
