@@ -12,11 +12,12 @@ A project that focuses on analysis of Airline Saftey.
 
 ### Dependencies
 
-* Jupyter Notebook
+* Tableau Desktop
+* Microsoft Powerpoint
 
 ### Installing
 
-* Please install Anaconda to use Jupyer Notebook
+* Please install Tableau Desktop to run the twbx file to see the visualization done using Tableau for the Infographic
 
 ### Executing program
 
@@ -26,7 +27,7 @@ A project that focuses on analysis of Airline Saftey.
 ## Help
 
 ```
-Please use Jupyter Notebook to run the ipynb file and make sure all the files in this folder are cloned as they are required to run ipynb file.
+Please use Tableau Desktop to run the twbx file.
 ```
 
 ## Authors
