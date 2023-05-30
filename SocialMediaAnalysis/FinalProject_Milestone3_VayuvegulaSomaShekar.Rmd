@@ -1,0 +1,250 @@
+---
+title: "InstagramFollowers_FinalProject"
+author: "Soma Shekar Vayuvegula"
+date: "08/13/2022"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+  word_document: default
+---
+
+## Introduction:
+
+|    Social media is an important arm of the current internet world. Social media not just provides content and entertainment but also has become a good source of income and popularity.
+
+|   With the datasets available from Kaggle, I have processed the data to show which category has is trending per country.
+
+
+## Problem statement addressed:
+
+|     To find a top successful categories of the social media (Instagram) handle per country, which can be used as suggestion to start a new instagram handle which will be successful and profitable.
+
+## Approach:
+
+1. Data Collection
+2. Merging different datasets
+3. Data Cleansing
+4. Data plotting using following plots: 
+    - Scatter plot
+    - Histogram
+    
+## How your approach addresses (fully or partially) the problem:
+
+|    I will be providing a prediction on which category should a person be starting a social media IInstagram) channel in a country of his liking depending on the data provided. 
+
+## Analysis:
+
+# Importing and Cleaning Data:
+
+# Instagram Categories Dataset importing:
+
+```{r}
+insta_categories <- read.csv('/Users/somashekarvayuvegula/Documents/Workspace/dsc520/completed/Final_Project/data/top_200_instagrammers_categories.csv')
+head(insta_categories)
+head(insta_categories$Main.Category)
+```
+
+# Instagrammers Details Dataset importing
+
+```{r}
+insta_details <- read.csv('/Users/somashekarvayuvegula/Documents/Workspace/dsc520/completed/Final_Project/data/top_200_instagrammers_details.csv')
+head(insta_details)
+```
+
+# Instagram Followers and Likes Dataset importing
+
+```{r}
+insta_followers <- read.csv('/Users/somashekarvayuvegula/Documents/Workspace/dsc520/completed/Final_Project/data/top_200_instagrammers_likes_followers_Jul2022.csv')
+
+head(insta_followers)
+```
+
+# Removing unwanted columns
+
+```{r}
+insta_followers <- subset (insta_followers, select = -c(Comments.Avg.,Views.Avg.,Avg..1.Day,Avg..3.Day,Avg..7.Day,Avg..14.Day,Avg..30.Day,Engagement.Rate,Engagement.Rate..60.Days.))
+
+head(insta_followers)
+```
+
+# Instagram Followers and Likes Dataset importing
+
+```{r}
+library("readxl")
+country_names <- read.csv('/Users/somashekarvayuvegula/Documents/Workspace/dsc520/completed/Final_Project/data/iso-country-codes.csv', na = "\\N", quote = '')
+head(country_names)
+```
+
+# Final Dataset:
+
+# Merging all the datasets
+
+```{r}
+df_details_combined <- merge(insta_categories,insta_details,by.x="Username",by.y="Username")
+df_followers_combined <-merge(df_details_combined,insta_followers,by.x="Username",by.y="Username")
+df_final <-merge(df_followers_combined,country_names[ , c("Alpha.2.code", "English.short.name.lower.case")],by.x="Country",by.y="Alpha.2.code")
+
+names(df_final)[names(df_final)=="English.short.name.lower.case"] <- "Country.name"
+names(df_final)[names(df_final)=="Main.video.category"] <- "Sub.category"
+head(df_final)
+```
+
+# Removing the rows for which followers, likes,username, main category, sub category country name are blank
+
+```{r}
+df_final <- df_final[!(df_final$Username == "" | df_final$Main.Category == ""| df_final$Sub.category == ""| df_final$Likes == ""| df_final$Followers == ""| df_final$Country.name == ""), ]
+
+head(df_final)
+```
+
+## Implications :
+
+|  Different plots and tables used to answer the problem statement:
+
+# Boxplot:
+
+```{r box plot}
+library(ggplot2)
+options(scipen = 999)
+boxplot<-ggplot(data=df_final,aes(x=Main.Category,y=Followers))+geom_boxplot(aes(colour=Country.name))
+
+boxplot + theme(axis.title.x=element_text(colour="DarkGreen",size = 15),
+        axis.title.y = element_text(colour = "Red",size = 15),
+        axis.text.x = element_text(size = 5, angle = 90),
+        axis.text.y = element_text(size=5),
+        legend.title = element_text(size=5),
+        legend.text=element_text(size=5),
+        legend.position = c(1,1),
+        legend.justification = c(1,1))
+
+
+
+options(scipen = 999)
+boxplot<-ggplot(data=df_final,aes(x=Main.Category,y=Likes))+geom_boxplot(aes(colour=Country.name))
+
+boxplot + theme(axis.title.x=element_text(colour="DarkGreen",size = 15),
+        axis.title.y = element_text(colour = "Red",size = 15),
+        axis.text.x = element_text(size = 5, angle = 90),
+        axis.text.y = element_text(size=5),
+        legend.title = element_text(size=5),
+        legend.text=element_text(size=5),
+        legend.position = c(1,1),
+        legend.justification = c(1,1))
+```
+# Scatter plot:
+
+```{r scatter plot}
+library(ggplot2)
+
+options(scipen = 999)
+scatter_plot <- ggplot(data=df_final,aes(x=Main.Category,y=Followers))+geom_point(aes(colour=Country.name))+
+  theme(axis.title.x=element_text(colour="DarkGreen",size = 15),
+        axis.title.y = element_text(colour = "Red",size = 15),
+        axis.text.x = element_text(size=5,angle = 90, vjust = 0.5, hjust=1),
+        axis.text.y = element_text(size=5),
+        legend.title = element_text(size=5),
+        legend.text=element_text(size=5),
+        legend.position = c(1,1),
+        legend.justification = c(1,1))
+scatter_plot
+
+options(scipen = 999)
+scatter_plot <- ggplot(data=df_final,aes(x=Main.Category,y=Likes))+geom_point(aes(colour=Country.name))+
+  theme(axis.title.x=element_text(colour="DarkGreen",size = 15),
+        axis.title.y = element_text(colour = "Red",size = 15),
+        axis.text.x = element_text(size=5,angle = 90, vjust = 0.5, hjust=1),
+        axis.text.y = element_text(size=5),
+        legend.title = element_text(size=5),
+        legend.text=element_text(size=5),
+        legend.position = c(1,1),
+        legend.justification = c(1,1))
+scatter_plot
+```
+
+# Trend lines:
+
+```{r Trend line}
+
+options(scipen = 999)
+trend_line<-ggplot(data=df_final,aes(x=Country.name,y=Followers,colour=Main.Category))+geom_line()
+
+trend_line+theme(axis.title.x=element_text(colour="DarkGreen",size = 15),
+        axis.title.y = element_text(colour = "Red",size = 15),
+        axis.text.x = element_text(size=5,angle = 90, vjust = 0.5, hjust=1),
+        axis.text.y = element_text(size=5),
+        legend.title = element_text(size=5),
+        legend.text=element_text(size=5),
+        legend.position = c(1,1),
+        legend.justification = c(1,1))
+
+options(scipen = 999)
+trend_line<-ggplot(data=df_final,aes(x=Country.name,y=Likes,colour=Main.Category))+geom_line()
+
+trend_line+theme(axis.title.x=element_text(colour="DarkGreen",size = 15),
+        axis.title.y = element_text(colour = "Red",size = 15),
+        axis.text.x = element_text(size=5,angle = 90, vjust = 0.5, hjust=1),
+        axis.text.y = element_text(size=5),
+        legend.title = element_text(size=5),
+        legend.text=element_text(size=5),
+        legend.position = c(1,1),
+        legend.justification = c(1,1))
+```
+
+# Table with sum and mean of followers based on country and main category:
+```{r}
+library(dplyr)
+
+summarise(group_by(df_final, Country.name, Main.Category), sum(Followers), mean(Followers))
+
+```
+
+# Table with sum and mean of likes based on country and main category:
+```{r}
+library(dplyr)
+
+summarise(group_by(df_final, Country.name, Main.Category), sum(Likes), mean(Likes))
+
+```
+
+# Table with sum and mean of followers and likes based on country and main category:
+```{r}
+library(dplyr)
+
+df_final %>%
+  group_by(Country.name, Main.Category) %>%
+  summarise(sum_followers=format(sum(Followers), scientific=FALSE),
+            sum_likes=format(sum(Likes), scientific=FALSE),
+            mean_followers=format((mean(Followers)), scientific=FALSE),
+            mean_likes=format((mean(Likes)), scientific=FALSE))
+
+```
+## Filter data based on country to see which category tops the list
+## Filter the country name based on prediction to be done. 
+## Example: I want to predict and see which category of instagram is successful in India
+```{r}
+library(dplyr)
+df_final %>%
+  group_by(Country.name, Main.Category) %>%
+  summarise(sum_followers=format(sum(Followers), scientific=FALSE),
+            sum_likes=format(sum(Likes), scientific=FALSE),
+            mean_followers=format((mean(Followers)), scientific=FALSE),
+            mean_likes=format((mean(Likes)), scientific=FALSE)) %>%
+  filter(any(Country.name == 'India'))
+
+```
+
+# Limitations:
+
+|   As part of data merging and data cleansing, we have lost some data due to missing fields which are very important for analysis. There is a very high probability that we might have missed some Instagram users or categories or countries, with which our predictions could have been different. 
+
+|  For example, with current analysis, for India, Entertainment is the top category. However, with the missing fields being made available, we could have had some other category like, Education topping the list when the margin of differences between two categories is minimal. 
+
+|  I have tried my best to show the data in the tabular format by filtering on country as that was my goal to see which categories top in a country. However, I was not able to sort based on number of followers or number of likes. I would like to implement sorting to make the results much better.
+
+
+# Conclusion:
+
+|  As per the analysis, in India, I have found that Entertainment is the category which has more followers. This process can be used to suggest any person (who is willing to start Instagram account and be an Instagrammer) on which field is most viewed, popular and profitable in the country of his choice.
+
+

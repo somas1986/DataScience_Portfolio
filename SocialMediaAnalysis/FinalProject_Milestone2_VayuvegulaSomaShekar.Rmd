@@ -1,0 +1,239 @@
+---
+title: "InstagramFollowers_FinalProject"
+author: "Soma Shekar Vayuvegula"
+date: "08/07/2022"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+  word_document: default
+---
+
+
+
+# Importing and Cleaning Data
+
+## Instagram Categories Dataset importing
+
+```{r}
+insta_categories <- read.csv('/Users/somashekarvayuvegula/Documents/Workspace/dsc520/completed/Final_Project/data/top_200_instagrammers_categories.csv')
+head(insta_categories)
+head(insta_categories$Main.Category)
+```
+
+## Instagrammers Details Dataset importing
+
+```{r}
+insta_details <- read.csv('/Users/somashekarvayuvegula/Documents/Workspace/dsc520/completed/Final_Project/data/top_200_instagrammers_details.csv')
+head(insta_details)
+```
+
+## Instagram Followers and Likes Dataset importing
+
+```{r}
+insta_followers <- read.csv('/Users/somashekarvayuvegula/Documents/Workspace/dsc520/completed/Final_Project/data/top_200_instagrammers_likes_followers_Jul2022.csv')
+
+head(insta_followers)
+```
+
+## Removing unwanted columns
+
+```{r}
+insta_followers <- subset (insta_followers, select = -c(Comments.Avg.,Views.Avg.,Avg..1.Day,Avg..3.Day,Avg..7.Day,Avg..14.Day,Avg..30.Day,Engagement.Rate,Engagement.Rate..60.Days.))
+
+head(insta_followers)
+```
+
+## Instagram Followers and Likes Dataset importing
+
+```{r}
+library("readxl")
+country_names <- read.csv('/Users/somashekarvayuvegula/Documents/Workspace/dsc520/completed/Final_Project/data/iso-country-codes.csv', na = "\\N", quote = '')
+head(country_names)
+```
+
+# Final Dataset
+
+## Merging all the datasets
+
+```{r}
+df_details_combined <- merge(insta_categories,insta_details,by.x="Username",by.y="Username")
+df_followers_combined <-merge(df_details_combined,insta_followers,by.x="Username",by.y="Username")
+df_final <-merge(df_followers_combined,country_names[ , c("Alpha.2.code", "English.short.name.lower.case")],by.x="Country",by.y="Alpha.2.code")
+
+names(df_final)[names(df_final)=="English.short.name.lower.case"] <- "Country.name"
+names(df_final)[names(df_final)=="Main.video.category"] <- "Sub.category"
+head(df_final)
+```
+
+## Removing the rows for which followers, likes,username, main category, sub category country name are blank
+
+```{r}
+df_final <- df_final[!(df_final$Username == "" | df_final$Main.Category == ""| df_final$Sub.category == ""| df_final$Likes == ""| df_final$Followers == ""| df_final$Country.name == ""), ]
+
+head(df_final)
+```
+
+# Questions for frture steps
+
+## What kind of plot are required to show the optimal output
+## What is the optimal form to represent the result
+
+
+# What information is not self-evident?
+
+## After eliminating the missing data, combining based on the Username & country and removing unwanted columns fom the final dataset, final dataset becomes very less comparing to the initial one. The result is going to be based on the available dataset which is relatively very small.
+
+
+# What are different ways you could look at this data?
+
+## We can make the prediction based on the country name, main category, followers and likes but these are not just enough data to predict which category is more successful in a particular country. Please suggest some other way which will be opt in different ways.
+
+
+# How do you plan to slice and dice the data?
+
+## Slicing and dicing the data is happened in the final dataset by merging and eliminating unwanted cloumns.
+
+
+# How could you summarize your data to answer key questions?
+
+## Data has the usenrname, url, country, country name, posts, likes, followers, main category and sub category. Based on these column we can able to answer our questions.
+
+
+# What types of plots and tables will help you to illustrate the findings to your questions?
+
+# Boxplot
+
+```{r box plot}
+library(ggplot2)
+options(scipen = 999)
+boxplot<-ggplot(data=df_final,aes(x=Main.Category,y=Followers))+geom_boxplot(aes(colour=Country.name))
+
+boxplot + theme(axis.title.x=element_text(colour="DarkGreen",size = 15),
+        axis.title.y = element_text(colour = "Red",size = 15),
+        axis.text.x = element_text(size = 5, angle = 90),
+        axis.text.y = element_text(size=5),
+        legend.title = element_text(size=5),
+        legend.text=element_text(size=5),
+        legend.position = c(1,1),
+        legend.justification = c(1,1))
+
+
+
+options(scipen = 999)
+boxplot<-ggplot(data=df_final,aes(x=Main.Category,y=Likes))+geom_boxplot(aes(colour=Country.name))
+
+boxplot + theme(axis.title.x=element_text(colour="DarkGreen",size = 15),
+        axis.title.y = element_text(colour = "Red",size = 15),
+        axis.text.x = element_text(size = 5, angle = 90),
+        axis.text.y = element_text(size=5),
+        legend.title = element_text(size=5),
+        legend.text=element_text(size=5),
+        legend.position = c(1,1),
+        legend.justification = c(1,1))
+```
+# Scatter plot 
+
+```{r scatter plot}
+library(ggplot2)
+
+options(scipen = 999)
+scatter_plot <- ggplot(data=df_final,aes(x=Main.Category,y=Followers))+geom_point(aes(colour=Country.name))+
+  theme(axis.title.x=element_text(colour="DarkGreen",size = 15),
+        axis.title.y = element_text(colour = "Red",size = 15),
+        axis.text.x = element_text(size=5,angle = 90, vjust = 0.5, hjust=1),
+        axis.text.y = element_text(size=5),
+        legend.title = element_text(size=5),
+        legend.text=element_text(size=5),
+        legend.position = c(1,1),
+        legend.justification = c(1,1))
+scatter_plot
+
+options(scipen = 999)
+scatter_plot <- ggplot(data=df_final,aes(x=Main.Category,y=Likes))+geom_point(aes(colour=Country.name))+
+  theme(axis.title.x=element_text(colour="DarkGreen",size = 15),
+        axis.title.y = element_text(colour = "Red",size = 15),
+        axis.text.x = element_text(size=5,angle = 90, vjust = 0.5, hjust=1),
+        axis.text.y = element_text(size=5),
+        legend.title = element_text(size=5),
+        legend.text=element_text(size=5),
+        legend.position = c(1,1),
+        legend.justification = c(1,1))
+scatter_plot
+```
+
+# Trend lines
+
+```{r Trend line}
+
+options(scipen = 999)
+trend_line<-ggplot(data=df_final,aes(x=Country.name,y=Followers,colour=Main.Category))+geom_line()
+
+trend_line+theme(axis.title.x=element_text(colour="DarkGreen",size = 15),
+        axis.title.y = element_text(colour = "Red",size = 15),
+        axis.text.x = element_text(size=5,angle = 90, vjust = 0.5, hjust=1),
+        axis.text.y = element_text(size=5),
+        legend.title = element_text(size=5),
+        legend.text=element_text(size=5),
+        legend.position = c(1,1),
+        legend.justification = c(1,1))
+
+options(scipen = 999)
+trend_line<-ggplot(data=df_final,aes(x=Country.name,y=Likes,colour=Main.Category))+geom_line()
+
+trend_line+theme(axis.title.x=element_text(colour="DarkGreen",size = 15),
+        axis.title.y = element_text(colour = "Red",size = 15),
+        axis.text.x = element_text(size=5,angle = 90, vjust = 0.5, hjust=1),
+        axis.text.y = element_text(size=5),
+        legend.title = element_text(size=5),
+        legend.text=element_text(size=5),
+        legend.position = c(1,1),
+        legend.justification = c(1,1))
+```
+
+# Table with sum and mean of followers based on country and main category
+```{r}
+library(dplyr)
+
+summarise(group_by(df_final, Country.name, Main.Category), sum(Followers), mean(Followers))
+
+```
+
+# Table with sum and mean of likes based on country and main category
+```{r}
+library(dplyr)
+
+summarise(group_by(df_final, Country.name, Main.Category), sum(Likes), mean(Likes))
+
+```
+
+# Table with sum and mean of followers and likes based on country and main category
+```{r}
+library(dplyr)
+
+df_final %>%
+  group_by(Country.name, Main.Category) %>%
+  summarise(sum_followers=format(sum(Followers), scientific=FALSE),
+            sum_likes=format(sum(Likes), scientific=FALSE),
+            mean_followers=format((mean(Followers)), scientific=FALSE),
+            mean_likes=format((mean(Likes)), scientific=FALSE))
+
+```
+## Filter data based on country to see which category tops the list
+## Filter the country name based on prediction to be done. 
+## Example: I want to predict and see which category of instagram is successful in India
+```{r}
+library(dplyr)
+df_final %>%
+  group_by(Country.name, Main.Category) %>%
+  summarise(sum_followers=format(sum(Followers), scientific=FALSE),
+            sum_likes=format(sum(Likes), scientific=FALSE),
+            mean_followers=format((mean(Followers)), scientific=FALSE),
+            mean_likes=format((mean(Likes)), scientific=FALSE)) %>%
+  filter(any(Country.name == 'India'))
+
+```
+
+# Do you plan on incorporating any machine learning techniques to answer your research questions? Explain.
+
+## With the help the plot and summarized tables, we can answer our question and there won't be any requirement for machine learning.
