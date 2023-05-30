@@ -1,4 +1,4 @@
-# StockMarketPrediction
+# Stock Market Prediction
 
 A project that focuses on Stock Market Prediction using Time Series Forecast model
 
