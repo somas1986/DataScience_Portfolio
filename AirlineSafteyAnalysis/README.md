@@ -1,4 +1,4 @@
-# AirlineSafteyAnalysis
+# Airline Safety Analysis
 
 A project that focuses on analysis of Airline Saftey.
 
