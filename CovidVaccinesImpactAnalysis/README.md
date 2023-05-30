@@ -4,7 +4,13 @@ A project that focuses on analysis of COVID19 vaccines on human beings.
 
 ## Description
 
+   COVID-19 has impacted the world very badly and has been a topic of discussion and analysis for over two years.
+
+   COVID-19 cases and deaths show how the countries are impacted due to COVID-19, COVID-19 testing and vaccinations are very important and give a picture about the countries efforts to get back to normalcy.
    
+   COVID-19 impact on the world has been minimized by the introduction of vaccines. 
+   
+   This project aims at the analysis of COVID-19 vaccines on the countries in the world
 
 ## Getting Started
 
