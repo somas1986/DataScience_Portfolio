@@ -4,6 +4,7 @@ A project that focuses on developing application using Python to get the current
 
 ## Description
 
+   As part of this project, we are calling openweathermap api to call the API. For this project, I have developed a User interface using Python to accept City name or ZIP Code as input to call weather api to get the weather details of city entered by the user.
    
 
 ## Getting Started
