@@ -2,12 +2,11 @@
 
 A project that focuses on analysis of Airline Saftey.
 
-   As air travel has gained pace over a period time, airlines are trying to provide safe travel and best in class facilities to their passengers.
-
-   We are going to analyze airline safety using various visualizations.
-
 ## Description
 
+   As Air travel has gained pace over a period time, airlines are trying to provide safe travel and best in class facilities to their passengers.
+
+   We are going to analyze airline safety using various visualizations.
 
 ## Getting Started
 
