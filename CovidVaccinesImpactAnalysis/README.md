@@ -16,15 +16,16 @@ A project that focuses on analysis of COVID19 vaccines on human beings.
 
 ### Dependencies
 
-* 
+* Jupyter Notebook
 
 ### Installing
 
-* 
+* Please install Anaconda to use Jupyer Notebook
 
 ### Executing program
 
-* 
+* Clone this folder
+* Run the ipynb file using Jupyter Notebook
 
 ## Help
 
@@ -49,6 +50,5 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 
 ## Acknowledgments
 
-*
 
 
