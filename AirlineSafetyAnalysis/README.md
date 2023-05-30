@@ -1,6 +1,6 @@
 # Airline Safety Analysis
 
-A project that focuses on analysis of Airline Saftey.
+A project that focuses on analysis of Airline Safety.
 
 ## Description
 
