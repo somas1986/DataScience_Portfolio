@@ -4,12 +4,9 @@ A project that focuses on Credit Card Fraud using various models
 
 ## Description
 
-    Customers expect to have a secure banking experience, and providing a solid fraud-detecting system has become an integral part of the credit card industry. I would like to build an automated system that detects fraudulent patterns and flags and temporarily blocks such transactions for customers to review, approve, or deny. 
+   Customers expect to have a secure banking experience, and providing a solid fraud-detecting system has become an integral part of the credit card industry. I would like to build an automated system that detects fraudulent patterns and flags and temporarily blocks such transactions for customers to review, approve, or deny. 
 
-    The main aim of this project is to build a prediction system using different models to track various patterns, abort abnormal transactions, and notify customers about suspected fraudulent activity on their credit cards.
-
-
-
+   The main aim of this project is to build a prediction system using different models to track various patterns, abort abnormal transactions, and notify customers about suspected fraudulent activity on their credit cards.
 
 ## Getting Started
 
@@ -49,5 +46,6 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 
 ## Acknowledgments
 
-* ●	Damarla, R. (n.d.). Stock Market Prediction using Decision Tree. Kaggle. Retrieved March 18, 2023, from https://www.kaggle.com/datasets/camnugent/sandp500?resource=download
-●	Mooney, P. (n.d.). Stock Market Data (NASDAQ, NYSE, S&P500). Kaggle. Retrieved March 18, 2023, from https://www.kaggle.com/datasets/camnugent/sandp500?resource=download
+* SHENOY, K. (n.d.). Credit Card Transactions Fraud Detection Dataset. Kaggle. https://www.kaggle.com/datasets/kartik2112/fraud-detection?select=fraudTrain.csv
+* XIANG, N. (n.d.). Credit Card Fraud Analysis and Modeling. Kaggle. https://www.kaggle.com/code/nathanxiang/credit-card-fraud-analysis-and-modeling
+
